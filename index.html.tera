@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leonardo Valencia's Resume Website</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Leonardo Valencia</h1>
+            <p>Aspiring Software Developer, Creative Thinker, and Problem Solver</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="button primary">View My Projects</a>
+                <a href="#contact-info" class="button secondary">Contact Me</a>
+            </div>
+            <div class="social-media">
+                <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/your-profile" target="_blank">GitHub</a> |
+                <a href="mailto:test@zurichleo.app">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Contact Info -->
+    <div class="floating-contact" id="contact-info">
+        <h2>Contact Info</h2>
+        <p><strong>Name:</strong> Leonardo Valencia</p>
+        <p><strong>City:</strong> Bolingbrook, Illinois</p>
+        <p><strong>College:</strong> North Central College, Naperville, Illinois</p>
+        <p><strong>Email:</strong> <a href="mailto:test@zurichleo.app">test@zurichleo.app</a></p>
+    </div>
+
+    <!-- Directory Section Taskbar -->
+    <div class="directory" id="directory">
+        <!-- Page Links -->
+        <div class="directory-item">
+            <span class="icon">📁</span> <!-- Placeholder icon for Projects -->
+            <span class="label">Projects</span>
+            <span class="description">A collection of my work</span>
+        </div>
+        <div class="directory-item">
+            <span class="icon">👤</span> <!-- Placeholder icon for About Me -->
+            <span class="label">About Me</span>
+            <span class="description">Get to know me</span>
+        </div>
+        <div class="directory-item">
+            <span class="icon">🛠️</span> <!-- Placeholder icon for Skills -->
+            <span class="label">Skills</span>
+            <span class="description">My technical abilities</span>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="directory-social">
+            <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+            <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+            <a href="mailto:test@zurichleo.app">Email</a>
+        </div>
+    </div>
+
+    <!-- Add extra space to test scrolling -->
+    <div class="extra-space"></div>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener('scroll', function () {
+            const hero = document.getElementById('hero');
+            const contactInfo = document.getElementById('contact-info');
+            const directory = document.getElementById('directory');
+            const heroHeight = hero.offsetHeight;
+
+            if (window.scrollY > heroHeight) {
+                hero.style.opacity = '0';
+                contactInfo.style.opacity = '1';
+                contactInfo.style.transform = 'translateX(0)';
+                directory.style.opacity = '1';
+                directory.style.transform = 'translateX(0)';
+            } else {
+                hero.style.opacity = '1';
+                contactInfo.style.opacity = '0';
+                contactInfo.style.transform = 'translateX(-50px)';
+                directory.style.opacity = '0';
+                directory.style.transform = 'translateX(-50px)';
+            }
+        });
+    </script>
+</body>
+</html>
+
+

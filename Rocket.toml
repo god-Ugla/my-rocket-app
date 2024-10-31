@@ -1,0 +1,8 @@
+[default]
+port = "$PORT"
+address = "0.0.0.0"
+
+
+[release]
+address = "0.0.0.0"
+port = 8000
